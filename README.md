@@ -64,6 +64,13 @@ python manage.py runserver
 2. Register as a customer at http://127.0.0.1:8000/register/
 3. Admin interface available at http://127.0.0.1:8000/admin/
 
+### Admin Login Credentials
+
+For testing purposes, you can use the following admin credentials:
+
+- **Username:** admin  
+- **Password:** admin123
+
 ## Codebase Structure
 
 ```
