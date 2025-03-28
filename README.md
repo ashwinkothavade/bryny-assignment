@@ -64,12 +64,78 @@ python manage.py runserver
 2. Register as a customer at http://127.0.0.1:8000/register/
 3. Admin interface available at http://127.0.0.1:8000/admin/
 
-## Project Structure
+## Codebase Structure
 
-- `service_requests/` - Main application directory
-  - `models.py` - Database models for requests and profiles
-  - `views.py` - View logic and request handling
-  - `forms.py` - Form definitions
-  - `urls.py` - URL routing
-  - `templates/` - HTML templates
-  - `admin.py` - Admin interface configuration
+```
+bynry_assignment/
+│
+├── gas_utility/                 # Project configuration directory
+│   ├── __init__.py
+│   ├── settings.py             # Project settings and configurations
+│   ├── urls.py                 # Main URL routing
+│   ├── wsgi.py                 # WSGI configuration
+│   └── asgi.py                 # ASGI configuration
+│
+├── service_requests/           # Main application directory
+│   ├── migrations/            # Database migrations
+│   ├── static/               # Static files
+│   │   ├── css/
+│   │   │   └── custom.css    # Custom styling
+│   │   └── img/
+│   │       └── favicon.svg   # Application icon
+│   │
+│   ├── templates/            # HTML templates
+│   │   ├── registration/
+│   │   │   ├── login.html    # User login template
+│   │   │   └── register.html # User registration template
+│   │   │
+│   │   └── service_requests/
+│   │       ├── base.html     # Base template with common elements
+│   │       ├── dashboard.html # Main dashboard view
+│   │       ├── create_request.html # Service request form
+│   │       ├── request_detail.html # Request details view
+│   │       └── profile.html  # User profile page
+│   │
+│   ├── __init__.py
+│   ├── admin.py             # Admin interface configuration
+│   ├── apps.py             # Application configuration
+│   ├── forms.py            # Form definitions
+│   ├── models.py           # Database models
+│   ├── urls.py             # Application URL routing
+│   └── views.py            # View logic
+│
+├── media/                   # User-uploaded files
+├── staticfiles/            # Collected static files
+├── .gitignore             # Git ignore rules
+├── manage.py              # Django management script
+├── README.md              # Project documentation
+└── requirements.txt       # Python dependencies
+
+### Key Components
+
+1. **Models** (`models.py`):
+   - `CustomerProfile`: Extended user profile with customer details
+   - `ServiceRequest`: Service request data structure
+   - `Comment`: Communication thread for requests
+
+2. **Views** (`views.py`):
+   - Customer registration and authentication
+   - Dashboard views for staff and customers
+   - Service request management
+   - Profile management
+
+3. **Forms** (`forms.py`):
+   - User registration forms
+   - Service request forms
+   - Profile update forms
+   - Comment forms
+
+4. **Templates**:
+   - Responsive Bootstrap-based layouts
+   - Role-based UI components
+   - Modern design with custom CSS
+
+5. **Static Files**:
+   - Custom CSS for enhanced UI
+   - SVG favicon and icons
+   - Third-party libraries (Bootstrap, Font Awesome)
