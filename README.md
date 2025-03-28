@@ -78,6 +78,8 @@ bynry_assignment/
 │
 ├── service_requests/           # Main application directory
 │   ├── migrations/            # Database migrations
+│   │   └── __init__.py
+│   │
 │   ├── static/               # Static files
 │   │   ├── css/
 │   │   │   └── custom.css    # Custom styling
@@ -104,38 +106,7 @@ bynry_assignment/
 │   ├── urls.py             # Application URL routing
 │   └── views.py            # View logic
 │
-├── media/                   # User-uploaded files
-├── staticfiles/            # Collected static files
 ├── .gitignore             # Git ignore rules
 ├── manage.py              # Django management script
 ├── README.md              # Project documentation
 └── requirements.txt       # Python dependencies
-
-### Key Components
-
-1. **Models** (`models.py`):
-   - `CustomerProfile`: Extended user profile with customer details
-   - `ServiceRequest`: Service request data structure
-   - `Comment`: Communication thread for requests
-
-2. **Views** (`views.py`):
-   - Customer registration and authentication
-   - Dashboard views for staff and customers
-   - Service request management
-   - Profile management
-
-3. **Forms** (`forms.py`):
-   - User registration forms
-   - Service request forms
-   - Profile update forms
-   - Comment forms
-
-4. **Templates**:
-   - Responsive Bootstrap-based layouts
-   - Role-based UI components
-   - Modern design with custom CSS
-
-5. **Static Files**:
-   - Custom CSS for enhanced UI
-   - SVG favicon and icons
-   - Third-party libraries (Bootstrap, Font Awesome)
